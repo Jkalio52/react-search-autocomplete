@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import AutoCompletedText from './AutoCompletedText';
 import './App.css';
+import logo from './logo.svg';
 
 
 class App extends Component {
