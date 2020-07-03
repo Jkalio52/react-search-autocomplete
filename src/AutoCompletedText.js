@@ -1,10 +1,12 @@
 import React from 'react';
-import countries from './Countries';
+import states from './States';
 import './App.css';
 
-export default class AutoCompletedText extends React.Component{
 
-    constructor(props){
+
+export default class AutoCompletedText extends React.Component {
+
+    constructor(props) {
         super(props)
         this.state = {
             suggestions: [],
@@ -15,9 +17,9 @@ export default class AutoCompletedText extends React.Component{
     onTextChange = (e) => {
         const value = e.target.value;
         let suggestions = [];
-        if(value.length > 0){
+        if (value.length > 0) {
             const regex = new RegExp(`^${value}`, 'i');
-            suggestions = countries.sort().filter(v => regex.test(v))
+            suggestions = states.sort().filter(v => regex.test(v))
         }
 
         this.setState(() => ({
@@ -35,7 +37,7 @@ export default class AutoCompletedText extends React.Component{
 
     renderSuggestions = () => {
         let { suggestions } = this.state;
-        if(suggestions.length === 0){
+        if (suggestions.length === 0) {
             return null;
         }
         return (
@@ -49,7 +51,7 @@ export default class AutoCompletedText extends React.Component{
     
     render() {
         const { text, suggestions } = this.state;
-        return(
+        return (
             <div id="notebooks">
                 <h2>Auto Completed</h2>
                 <input id="query" type="text" onChange={this.onTextChange} value={text}/>

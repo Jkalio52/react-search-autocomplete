@@ -1,4 +1,4 @@
-export default '
+export default `
 Alabama
 Alaska
 Arizona
@@ -48,5 +48,5 @@ Virginia
 Washington
 West Virginia
 Wisconsin
-Wyoming'.split('\n')
+Wyoming`.split('\n')
 
