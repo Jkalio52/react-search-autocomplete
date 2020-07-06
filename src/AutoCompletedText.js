@@ -53,7 +53,7 @@ export default class AutoCompletedText extends React.Component {
         const { text, suggestions } = this.state;
         return (
             <div id="notebooks">
-                <h2>Auto Completed</h2>
+                <h2>Auto Completed Search</h2>
                 <input id="query" type="text" onChange={this.onTextChange} value={text}/>
                 {this.renderSuggestions()}
                 <span>Suggestions: {suggestions.length}</span>
